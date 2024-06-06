@@ -4,7 +4,7 @@
 
 目前还没有实现存Delegate的索引，存的还是MethodInfo，因此有一定额外性能开销。
 
-待有相关需求后，再改为生成Delegate索引表提高性能。
+后续计划是会先改成生成DynamicMethod索引表以小成本大幅提高性能，再改为生成Delegate索引表以优化至最佳状态。
 
 ### 性能测试结果：
 ![image](https://github.com/tly1378/eca/assets/63791112/005473dc-da24-4884-a6f9-9885e5afa130)
