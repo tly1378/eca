@@ -10,7 +10,7 @@ namespace ECA
 
         public static object Invoke(object instance, string key, params object[] objects)
         {
-            if (objects == null || objects.Length == 0)
+            if (objects.Length == 0)
             {
                 (key, objects) = ToArguments(key);
             }
@@ -35,7 +35,7 @@ namespace ECA
             }
         }
 
-        private static readonly char[] SPLIT_CHARS = new char[] { '(', ')' };
+        private static readonly char[] SPLIT_CHARS = { '(', ')' };
 
         private static (string key, object[] arguments) ToArguments(string input)
         {
